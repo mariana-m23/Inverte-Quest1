@@ -1,0 +1,15 @@
+import requests
+from PIL import Image
+from io import BytesIO
+
+# Replace with your folder's CID
+CID = "<YOUR_CID>"
+image_url = f"https://gateway.pinata.cloud/ipfs/{CID}/image_name.jpg"
+
+# Fetch the image
+response = requests.get(image_url)
+image = Image.open(BytesIO(response.content))
+image.show()  # Display the image
+
+# Optional: Save locally for SAM processing
+image.save("downloaded_image.jpg")

@@ -1,0 +1,16 @@
+from segment_anything import sam_model_registry, SamPredictor
+
+# Load the SAM model
+sam = sam_model_registry["vit_h"](checkpoint="sam_vit_h.pth")
+predictor = SamPredictor(sam)
+
+# Open the image
+image = image.open("downloaded_image.jpg")
+predictor.set_image(image)
+
+# Perform segmentation (example using a random point)
+masks, scores, logits = predictor.predict(
+    point_coords=[[100, 100]],
+    point_labels=[1],
+    multimask_output=True
+)

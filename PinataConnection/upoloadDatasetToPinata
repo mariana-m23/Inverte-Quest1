@@ -9,6 +9,7 @@ API_SECRET = 'fedf194e29c1c5c587ee4576d78b5a84a6c7d757030ae686724f8ccb09e8dd77'
 # Pinata API URL
 url = '/ipfs/bafybeiddnaejawkhu7plo33xffpuu5k3vvj2hqj6knoputnk7a6lblhfyq'
 
+
 # Directory where your images are stored (e.g., "dataset/")
 image_folder = 'dataset/'
 
